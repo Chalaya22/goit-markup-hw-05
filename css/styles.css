@@ -95,7 +95,7 @@ ol {
   padding-top: 24px;
   padding-bottom: 24px;
 }
-.list-item::after {
+.link-studio::after {
   position: absolute;
   content: '';
   display: flex;
