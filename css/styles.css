@@ -393,9 +393,8 @@ address {
   border: 1px solid #8e8f99;
   border-radius: 4px;
 
-  transition-property: color, border-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .customers-logo-link:hover,
 .customers-logo-link:focus {
@@ -485,12 +484,7 @@ address {
   gap: 24px;
   margin-bottom: 72px;
 }
-/* .btn-decoration:hover,
-.btn-decoration:focus {
-  color: #ffffff;
-  background-color: var(--accent-color-second);
-  border: 1px solid transparent; */
-/* } */
+
 .filter-btn {
   background: var(--secondary-font-family);
   font-family: var(--main-font-family);
@@ -529,6 +523,32 @@ address {
 .cards-list-item {
   width: calc((100% - 48px) / 3);
 }
+.overlay-img-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #4d5ae5;
+  width: 100%;
+  height: 100%;
+  padding: 40px 32px;
+  overflow: auto;
+  transform: translate(0, 100%);
+  transition: transform 500ms linear;
+
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 1.5;
+  color: #f4f4fd;
+}
+.cards-list-item:hover .overlay {
+  transform: translate(0, 0);
+}
 .card-description {
   padding: 32px 16px;
   border: 1px solid #e7e9fc;
@@ -548,8 +568,8 @@ address {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.link:hover,
-.link:focus {
+.card-link:hover,
+.card-link:focus {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
     0px 2px 1px rgba(46, 47, 66, 0.08);
 }
