@@ -51,7 +51,7 @@
       <section class="section-first">
         <div class="section-first-fon container">
           <h1 class="heder-style">Effective Solutions for Your Business</h1>
-          <button type="button" class="button-order-service data-modal-open">Order Service</button>
+          <button type="button" class="button-order-service" data-modal-open>Order Service</button>
         </div>
       </section>
       <!-- SECTION SECOMD -->
@@ -461,15 +461,16 @@
         </div>
       </div>
     </footer>
-    <div class="backdrop data-modal">
-      <div class="modal">
-        <div type="button" class="btn-modal">
-          <svg class="icon-vector" aria-label="icon-vector" width="8" height="8">
+    <div class="backdrop" data-modal>
+      <div class="modal" is-hidden>
+        <button type="button" data-modal-close class="modal-class-btn">
+          <svg class="modal-icon" aria-label="modal icon" width="8" height="8">
             <use href="./images/icons.svg#icon-vector"></use>
           </svg>
-        </div>
+        </button>
       </div>
     </div>
+
     <script src="./js/modal.js"></script>
   </body>
 </html>
